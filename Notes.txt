@@ -32,4 +32,65 @@ with open(cereal_csv, newline="") as csvfile:
         if float(row[7]) >= 5:
             print(row)
 
-* Questions? 
+* Questions? How are we feeling? +1 -1
+
+3 JS - JavaScript Objects
+* Many similarities with Python... what are the differences? 
+* Open VS Code for this one
+* Documentation mdn <search term>, mozilla.org
+- Object - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+* Python dictionary or JS Object
+var movie = {
+  name: "Star Wars",
+  year: 1977,
+  profitable: true,
+  sequels: [5, 6, 1, 2, 3, "The Last Jedi"]
+}
+console.log(<print key>)
+movie.rating = 10;
+delete move.rating;
+* Objects**
+var people = {
+  mom: "wilma flintstone",
+  dad: "fred flintstone",
+  daughter: "pebbles",
+  son: "bambam"
+};
+Object.keys(novie)
+Object.values(movie)
+Object.entries(movie)
+* How we feeling? +1 -1, Questions
+
+4 - JS - Word Counter
+* Building on other sessions... any questions before we begin.
+* Open instructions & output, 10 minutes to code this up.
+- forEach() - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach
+* How do we feel after that exercise? +1 -1
+CODE:
+function wordCount(myString) {
+  // Convert string to an array of words
+  var stringArray = myString.split(" ");
+
+  // An object to hold word frequency
+  var wordFrequency = {};
+
+  // Iterate through the array
+  for (var i = 0; i < stringArray.length; i++) {
+    var currentWord = stringArray[i];
+    // If the word has been seen before...
+    if (currentWord in wordFrequency) {
+      // Add one to the counter
+      wordFrequency[currentWord] += 1;
+    }
+    else {
+      // Set the counter at 1
+      wordFrequency[currentWord] = 1;
+    }
+  }
+  console.log(wordFrequency);
+  return wordFrequency;
+}
+* BONUS: How to use forEach and anonymous function?
+stringArray.forEach(function(currentWord) {
+* BONUS * 2: How to use an arrow function
+stringArray.forEach((currentWord) => {
